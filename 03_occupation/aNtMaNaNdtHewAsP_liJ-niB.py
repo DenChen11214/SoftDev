@@ -10,6 +10,7 @@ with open('occupations.csv') as f:
     l = f.read().split("\n")  # fill list with rows of csv
 
 l.pop(0)  # remove header
+l.pop()   # remove last line
 
 
 d = {}  # create dictionary for occupation (key) and percentage (value)
