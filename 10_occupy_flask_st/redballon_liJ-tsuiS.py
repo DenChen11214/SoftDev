@@ -12,7 +12,7 @@ def convert(filename):
     #open file and parse it into a generator using csv reader
     #convert the generator into a list exluding the job and percentage table headers and footers
     #read values two at a time as tuples and use those to create a key value pair
-    f = {k:float(v) for k,v in list(csv.reader(open(filename)))[10:-1]}
+    f = {k:float(v) for k,v in list(csv.reader(open(filename)))[1:-1]}
     return f
 
 def pickRandom(f):
