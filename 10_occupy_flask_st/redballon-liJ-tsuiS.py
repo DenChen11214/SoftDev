@@ -1,7 +1,7 @@
-# 
+# Red Balloon - Johnson Li Simon Tsui
 # SoftDev1 pd8
-# 
-# 2018-09-21
+# K10 -- Jinja Tuning ...
+# 2018-09-22
 
 from flask import Flask, render_template
 import random
