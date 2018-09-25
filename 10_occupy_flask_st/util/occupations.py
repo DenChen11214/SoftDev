@@ -26,5 +26,5 @@ def pickRandom(occupationDict):
 
 
 def randOcc():
-    occupationDict = convert("occupations.csv")
+    occupationDict = convert("/occupations.csv")
     return "weighted random pick: " + pickRandom(occupationDict)
