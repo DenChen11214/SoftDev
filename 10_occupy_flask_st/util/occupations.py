@@ -24,7 +24,7 @@ def pickRandom(occupationDict):
             return key
     return "unemployed"
 
-
+# converts the csv file and chooses a random occupation
 def randOcc():
-    occupationDict = convert("/occupations.csv")
+    occupationDict = convert("data/occupations.csv")
     return "weighted random pick: " + pickRandom(occupationDict)
