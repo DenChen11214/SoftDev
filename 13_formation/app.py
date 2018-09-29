@@ -11,12 +11,15 @@ def home():
     # root route with form
     return render_template("form.html")
 
-@app.route("/auth")
+@app.route("/auth", methods=['GET', 'POST'])
 def authenticate():
     # each needed field is assigned to a var
-    username = request.args['username']
-    reqMethod = request.method 
-    greeting = "HI " + username.upper()
+    reqMethod = request.method
+    if reqMethod == 'GET':
+        username = request.args['username']
+    elif reqMethod == 'POST':
+        username = request.form['username']
+    greeting = "HI " + username.upper();
 
     # return the html page using a template
     return render_template("response.html", 
