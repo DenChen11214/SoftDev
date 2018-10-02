@@ -22,7 +22,7 @@ def login():
     # otherwise, it just renders the login page
     if username in session:
         return render_template("home.html", username = username)
-    return render_template("login.html")
+    return render_template("login.html", error = "")
 
 @app.route("/auth", methods=['GET', 'POST'])
 def authenticate():
@@ -36,7 +36,7 @@ def authenticate():
         session[username] = username;
         return render_template("home.html", username = username)
     else:
-    	return redirect(url_for("login"))
+        return render_template("login.html", error = "Username or Password is invalid.")
 
 # remove user from session and redirect to login page
 @app.route("/logout")
