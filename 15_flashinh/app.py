@@ -31,7 +31,7 @@ def authenticate():
 
     # checks if credentials are correct
     # if they're correct add user to session and render home page
-    # if not, they go back to login page
+    # if not, they go back to login page and a error message is shown
     if usernameInput == username and passwordInput == password:
         session[username] = username;
         return render_template("home.html", username = username)
