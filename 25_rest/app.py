@@ -15,25 +15,29 @@ def home():
 @app.route("/results")
 def results():
     search = request.args["search"]
-    print("-------")
-    print(search)
-    print("-------")
+    # print("-------")
+    # print(search)
+    # print("-------")
 
-    res = urlopen(URL_STUB + search)
-    print("-------")
-    print(res)
+    res = urlopen(URL_STUB + search.replace(" ", ""))
+    # print("-------")
+    # print(res)
     # print(res.read())
-    print(json.loads(res.read()))
-    print("-------")
-    # res_info = json.loads(res.read())
-
-    # print("-------")
-    # print(res_info[0])
+    # print(json.loads(res.read()))
     # print("-------")
 
-    return "hi"
+    res_info = json.loads(res.read())
+    first_result = res_info["results"][0]
+    # print("-------")
+    # print(res_info["results"][0]["title"])
+    # print("-------")
 
-    # res = urlopen(URL_STUB.format())
+    return render_template("results.html", img_url=first_result["image_url"], 
+                                           mal_link=first_result["url"],
+                                           title=first_result["title"],
+                                           synopsis=first_result["synopsis"],
+                                           episodes=first_result["episodes"],
+                                           score=first_result["score"])
 
 
 if __name__ == "__main__":

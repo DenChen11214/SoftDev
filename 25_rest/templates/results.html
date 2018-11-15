@@ -1,16 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <title>Results</title>
+        <title>Result</title>
     </head>
     <body>
-
-        <img src={{img_url}} style="float: left;">
-        Title: <a href={{mal_link}}> {{title}} </a>
+        <h2>Result</h2>
+        <a href="/">Back</a>
+        <img src={{img_url}} style="float: left; margin-right: 2em">
+        <h3>Title: <a href={{mal_link}} style="text-decoration: none; color: blue;" target="_blank"> {{title}} </a></h3>
         <br>
-        hi
+        <div style="width: 30%; overflow: auto;">
+            {{synopsis}}
+        </div>
         <br>
-        
-        
+        Episodes: {{episodes}}
+        <br>
+        Score: {{score}}
     </body>
+    
 </html>
