@@ -1,7 +1,7 @@
-// Team Birdies - Shin Bamba, Johnson Li
+// Team Fishies - Vincent Chi, Johnson Li
 // SoftDev1 pd8
-// K28 -- Sequential Progression
-// 2018-12-19T
+// K29 -- Sequential Progression II: Electric Boogaloo
+// 2018-12-19W
 
 var fibonacci = (n) => {
     return fibHelp(1, 0, n);
