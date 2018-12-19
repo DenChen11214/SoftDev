@@ -40,7 +40,7 @@ def ghibli():
 def number():
     NUMBER_URL = "http://numbersapi.com/random/trivia"
 
-    res = urlopen(NUMBER_URL).read()
+    res = urlopen(NUMBER_URL).read().decode("utf-8")
 
     return render_template("number.html", fact=res)
 
