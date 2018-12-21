@@ -1,7 +1,7 @@
 // Team Derek - Shin Bamba, Johnson Li
 // SoftDev1 pd8
 // K30 -- Sequential Progression III: Season of the Witch
-// 2018-12-21F 
+// 2018-12-21F
 
 var h = document.getElementById("h");
 var thelist = document.getElementById("thelist");
@@ -33,6 +33,7 @@ thelist.addEventListener("mouseout", () => {
 
 thelist.addEventListener("click", (e) => {
     e.target.remove();
+    h.innerHTML = "Hello World!";
 });
 
 b.addEventListener("click", () => {
